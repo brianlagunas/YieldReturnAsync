@@ -1,0 +1,75 @@
+﻿What’s New in 21.1: Ignite UI for React
+Spring is upon us. The bees are buzzing, the birds are chirping, the flowers are blooming, and Infragistics is launching a brand-new release of Ignite UI for React. So let’s grab a handful of our Easter candy, and cover all the goodies we are shipping in today’s Ignite UI for React 21.1 release.
+React Grid
+It’s no secret that the React Grid is by far the most popular component in the Ignite UI for React product offering. Easy to use, exploding with performance, and packed with features. It’s no wonder why the Ignite UI for React grid is the go-to component for all of our React customers. In this latest release of Ignite UI for React 21.1, we wanted to make sure we focused on the editing and selection capabilities of the React grid. We really wanted to home in the editing and selection experiences so that they feel natural regardless of if you are using a mouse or just the keyboard.
+Enter Behavior After Edit
+By far the most popular request we have received from our customers was the ability to control the Enter key. Our customers are used to the editing experience provided by Microsoft Excel. Meaning that when you edit a cell and then commit the edit by pressing the Enter key, the active cell then moves to the cell under the previously edited cell.  This allows end-users to perform fast data entry on a single column.
+To support this request, we added a new property named EnterBehaviorAfterEdit. This property will control the behavior of the Enter key when it is pressed to commit an edit operation.
+The EnterBehaviorAfterEdit property has the following options:
+•	None (Default) - after an edit is committed using the Enter key, the current cell stays active.
+•	MoveUp - after an edit is committed using the Enter key, the cell above the current cell becomes active.
+•	MoveDown - after an edit is committed using the Enter key, the cell below the active cell becomes active.
+•	MoveLeft - after an edit is committed using the Enter key, the cell to the left of the current cell becomes active.
+•	MoveRight - after an edit is committed using the Enter key, the cell to the right of the current cell becomes active.
+Enter Behavior
+While the “Enter Behavior After Edit” feature met the requirements of 98% of our customers, another feature was requested regarding the Enter key.  The default behavior of the Enter key is to enter edit mode on the active cell. However, some customers did not want this behavior. Instead, they wish to use the Enter key to navigate the cells instead of entering edit mode on a cell. To support this request, we added a property named EnterBehavior.
+The EnterBehavior property has the following options:
+•	None – pressing the Enter key does nothing.
+•	Edit (Default) – the active cell enters edit mode on pressing the enter key.
+•	MoveUp – the cell above the current active cell becomes active.
+•	MoveDown – the cell below the current active cell becomes active.
+•	MoveLeft – the cell to the left of the current active cell becomes active.
+•	MoveRight – the cell to the right of the current active cell becomes active.
+Begin Editing on Key Press
+Another popular editing feature that was inspired from Excel was the ability to enter edit mode by simply typing characters on the keyboard. Before today, if you wanted to enter edit mode on an active cell, you had to either hit the Enter key, press F2, or click/double-click on the cell.
+Starting today, you can now immediately enter edit mode on an active cell by typing valid edit characters on the keyboard.
+These characters include:
+`abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!"$%^&amp;*()_+-=[];\'#,./\|<>?:@~{}`
+By default, this new editing behavior is turned on. However, if you wish to turn it off, you can set the EditOnKeyPress property to false.
+As you can see, when you combine the new “begin editing on key press” feature with the “enter key behavior” feature, you get a seamless, fluid, and intuitive editing experience.
+[gif]
+Selection Improvements
+The next area of focus for the React grid was selection. We really wanted to make sure the selection experience was smooth, intuitive, and keyboard friendly. We started by adding Row Range Selection. Yeah, I know… that seems like an obvious feature to have, but we ran out of time in the last release to add it. So we are adding it now.
+What is Row Range Selection? Row Range Selection I the ability to select a range of rows that may or may not be contiguous. Row selection can be made using either the mouse or keyboard. To enable this selection mode, you must set the SelectionMode property to MutipleRow.
+Here are the selection interactions that have been added to the React grid. 
+•	Click a row and then drag the mouse to select contiguous rows.
+•	Click a row, hold the Shift Key, and then click another row to select all rows between the first row you click and the last.
+•	Hold the Control Key (CTRL) and click a row to add the row to the current collection of selected rows.
+•	Press the Shit Key and use the arrows keys up or down to select rows.
+Of course, if at any time you wish to deselect all rows you have selected, simply press the Escape Key on the keyboard.
+Column Summaries in Column Options
+The React grid has had support for summaries for over a year now. However, to use them, you must apply summaries using the API. Meaning, you must write code to add them. The end user cannot add the summaries themselves at runtime. Lets be honest, that’s where summaries are most popular.
+Starting today, your end-users can now add summaries to any column they want using the column options dialog. Simply open the dialog by clicking on the column menu, click on the Summaries menu item, and then select which summaries you want to apply to the column. Click the apply button and watch the magic happen.
+[insert image]
+React Date Picker
+The React Date Picker component offers a drop-down control that’s optimized for picking a single date from a calendar view where contextual information like the day of the week or fullness of the calendar is important. The React date picker was initially shipped with limited features in our last Ignite UI for React 20.2 release. Since then, we have been hard at work completing the functionality of the React date picker to provide all the features you would expect in a React date picker component.
+Here is a highlight of all the new features we are shipping in our React Date Picker for this 21.1 release.
+Text Input
+You can now use the keyboard to enter dates into the React date picker component without selecting a date from the calendar drop down.
+[insert gif]
+Format Input Text
+Now that text input is allowed in the React Date Picker, it is important that you can format the date that is displayed in the text area of the date picker component. To set the format of the date, simply set the Format property to the appropriate format string you wish to use.
+The following example is using the MM/DD/YYYY format string:
+[insert image]
+Today Button
+We have added a “Today Button” to the calendar drop down that will allow you to select the current date no matter what month or year you have navigated to within the calendar. You can hide the Today Button from the calendar drop down by setting the ShowTodayButton property to false.
+[insert image]
+First Day of Week
+You can now define the first day of the week for your locale by setting the FirstDayOfWeek property. I this example; the first day of the week is set to TBD:
+[insert image]
+First Day of Year
+Defines when the first week of the year should start, FirstWeekOfYear.FirstDay, FirstWeekOfYear.FirstFullWeek or FirstWeekOfYear.FirstFourDayWeek are the possible values
+Week Numbers
+By setting the ShowWeekNumbers property to true, you can display a column which displays the number of weeks in the current month.
+[insert image]
+Date Limits
+When date limits are set via the MinDate and maxDate properties, the React Date Picker will not allow out-of-bounds dates to be picked or entered.
+In this example, the allowed dates are 3/6/2021-4/6/2022:
+[insert image]
+Labels
+TBD
+Placeholders
+When the value of the React Date Picker is null, you can render a text hint to your end users by setting the Placeholder property of the component.
+[insert image]
+Accessibility
+The React Date Picker is now accessible by screen readers and provides full WAI-ARIA accessibility support.
